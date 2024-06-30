@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  tedi:
+    container_name: ${CONTAINER_NAME}
+    image: ${IMAGE}
+    user: ${USERID}:${GID}
+    restart: "yes"
+    ports:
+      - "8408:8408"
+    volumes:
+      - /opt/tedi:/opt/tedi
+    networks:
+    - tedi
+    labels:
+      app: 'tedi'
+
+networks:
+  tedi: {}
+    
