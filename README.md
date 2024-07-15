@@ -1,8 +1,11 @@
 <div align="center">
   <a href="https://github.com/tedi-software/tedi">
-    <img src="images/banner.png" alt="Tedi" width="1280" height="640">
+    <img src="images/banner.png" alt="Tedi" >
   </a>
 </div>
+
+<!-- width="1280" height="640" -->
+
 
 ###### *Copywrite (C) 2020-2024 TEDI, LLC*
 
@@ -40,7 +43,7 @@ TEDI is powered by Golang and can run as a stand-alone binary running in systemd
 The tedi repository is an example installation. Follow the installation steps below to start and start TEDI.
 
 
-### Installation
+### ${\color{949698} ➤}$ Installation
 1. clone the repo
    ```sh
    git clone https://github.com/tedi-software/tedi.git
@@ -51,7 +54,7 @@ The tedi repository is an example installation. Follow the installation steps be
    cp -pR tedi /opt/
    ```
 
-### Running TEDI
+### ${\color{949698} ➤}$ Running TEDI
 1. start TEDI
    ```sh
    cd /opt/tedi/bin
@@ -72,13 +75,13 @@ The tedi repository is an example installation. Follow the installation steps be
 
 
 
-## Usage
+## ${\color{949698} ➤}$ Usage
 
 
 <p align="right">(<a href="#top">top</a>)</p>
 
 
-## Supported Protocols
+## ${\color{949698} ➤}$ Supported Protocols
 - [x] Shell
 - [x] SFTP
 - [x] HTTPS
@@ -86,7 +89,7 @@ The tedi repository is an example installation. Follow the installation steps be
 - [x] XSLT
 - [x] PGP
 
-## Roadmap
+## ${\color{949698} ➤}$ Roadmap
 - [] AS2
 - [] Kafka
 - [] Azure ADLS
@@ -100,7 +103,7 @@ See the [open issues](https://github.com/tedi-software/tedi/issues) for a full l
 <p align="right">(<a href="#top">top</a>)</p>
 
 
-## Support
+## ${\color{949698} ➤}$ Support
 For questions, open an [issue](https://github.com/tedi-software/tedi/issues) 
 
 <p align="right">(<a href="#top">top</a>)</p>
