@@ -85,9 +85,14 @@ The tedi repository is an example installation. Follow the installation steps be
 - [x] Shell
 - [x] SFTP
 - [x] HTTPS
-- [x] NATS 
-- [x] XSLT
+- [x] NATS (Core/JetStream)
+- [x] XSLT (in-memory/on-disk)
 - [x] PGP
+- [x] Database
+  - [x] Oracle
+  - [x] MySQL
+  - [x] PostgreSQL
+  - [x] Microsoft SQL Server
 
 ## ${\color{949698} ➤}$ Roadmap
 - [] AS2
