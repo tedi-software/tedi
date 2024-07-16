@@ -14,7 +14,7 @@
 [![GitHub Downloads (all assets, all releases)][downloads-shield]][downloads-url]
 
 <p align="left">
-<a href="https://github.com/tedi-software/tedi">View Demo</a>
+<a href="#demo">View Demo</a>
     |
     <a href="https://github.com/tedi-software/tedi/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     |
@@ -76,16 +76,47 @@ The tedi repository is an example installation. Follow the installation steps be
 > This sample TEDI installation includes binaries for Linux and OSX.
 
 > the MacOSX binaries are not signed and will be put into quarantine on download. To list and subsequently remove from quarantine:
-
-```sh
-    xattr <binary name>
-    xattr -d com.apple.quarantine <binary name>
+<span style="display:inline-block; width:5em; font-size:0.80em;">
+```zsh
+xattr <binary name>
+xattr -d com.apple.quarantine <binary name>
 ```
+</span>
 
 <p align="right">(<a href="#top">top</a>)</p>
 
 
 ## ${\color{949698} ➤}$ Usage
+
+TEDI is driven by configuration files and 
+
+
+<a id="demo"></a>
+
+## ${\color{949698} ➤}$ Demo
+
+Many example services can be found under <span style="font-size:0.80em;">``` /tedi/services/examples ```</span>.
+
+For this simple demo, we'll use the <span style="font-size:0.80em;"> ``` cmd ``` </span> example.
+
+The <span style="font-size:0.80em;">``` cmd ```</span> example demonstrates the stitching together of two *processors* to form a *service interface*. 
+This particular interface is driven by two shell scripts (*commands*): 
+1. one to create input.
+2. the second to receive input from the first shell and act on it.
+
+note: the input script will run indefinately.
+
+( these commands assume you rooted tedi under /opt/ )
+
+```sh
+cd /opt/tedi/services/examples/cmd
+mv ignore_service.properties service.properties
+cd /opt/tedi/bin
+./start.sh
+```
+
+
+
 
 
 
