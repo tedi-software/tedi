@@ -33,6 +33,11 @@ TEDI saves engineering and development time by employing a framework of common e
 
 TEDI is powered by Golang and can run as a stand-alone binary running in systemd or if you prefer, it can easily be containerized.
 </p>
+<div align="left">
+  <a href="https://github.com/tedi-software/tedi">
+    <img src="images/adiag.png" alt="architectural-diagram" >
+  </a>
+</div>
 
 <p align="right">(<a href="#top">top</a>)</p>
 
@@ -40,9 +45,11 @@ TEDI is powered by Golang and can run as a stand-alone binary running in systemd
 The tedi repository is an example installation. Follow the installation steps below to start and stop TEDI.
 
 ### ${\color{949698} ➤}$ Installation
-1. clone the repo
+1. fetch the tedi repository
    ```sh
    git clone https://github.com/tedi-software/tedi.git
+
+   # git clone git@github.com:tedi-software/tedi.git
    ```
 2. copy the tedi folder to the directory you want to root TEDI
    ```sh
@@ -81,6 +88,8 @@ The tedi repository is an example installation. Follow the installation steps be
 
 
 ## ${\color{949698} ➤}$ Usage
+
+
 
 <p align="right">(<a href="#top">top</a>)</p>
 
