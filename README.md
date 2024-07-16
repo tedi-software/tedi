@@ -79,7 +79,7 @@ The tedi repository is an example installation. Follow the installation steps be
 
 ```sh
     xattr <binary name>
-    xattr -d <binary name>
+    xattr -d com.apple.quarantine <binary name>
 ```
 
 <p align="right">(<a href="#top">top</a>)</p>
