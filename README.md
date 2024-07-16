@@ -33,7 +33,7 @@ TEDI saves engineering and development time by employing a framework of common e
 
 TEDI is powered by Golang and can run as a stand-alone binary running in systemd or if you prefer, it can easily be containerized.
 </p>
-<div align="left">
+<div align="center">
   <a href="https://github.com/tedi-software/tedi">
     <img src="images/adiag.png" alt="architectural-diagram" >
   </a>
