@@ -1,11 +1,9 @@
+
 <div align="center">
   <a href="https://github.com/tedi-software/tedi">
     <img src="images/banner.png" alt="Tedi" >
   </a>
 </div>
-
-<!-- width="1280" height="640" -->
-
 
 ###### *Copywrite (C) 2020-2024 TEDI, LLC*
 
@@ -15,7 +13,7 @@
 [![Issues][issues-shield]][issues-url]
 [![GitHub Downloads (all assets, all releases)][downloads-shield]][downloads-url]
 
-[![License][license-shield]][license-url]
+<!-- [![License][license-shield]][license-url] -->
 
 <p align="left">
 <a href="https://github.com/tedi-software/tedi">View Demo</a>
@@ -38,10 +36,8 @@ TEDI is powered by Golang and can run as a stand-alone binary running in systemd
 
 <p align="right">(<a href="#top">top</a>)</p>
 
-
 ## ${\color{949698} ➤}$ Getting Started
-The tedi repository is an example installation. Follow the installation steps below to start and start TEDI.
-
+The tedi repository is an example installation. Follow the installation steps below to start and stop TEDI.
 
 ### ${\color{949698} ➤}$ Installation
 1. clone the repo
