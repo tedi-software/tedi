@@ -75,7 +75,7 @@ The tedi repository is an example installation. Follow the installation steps be
 > [!NOTE]
 > This sample TEDI installation includes binaries for Linux and OSX.
 
-> the MacOSX binaries are not signed and will be put into quarantine on download. To list and subsequently remove:
+> the MacOSX binaries are not signed and will be put into quarantine on download. To list and subsequently remove from quarantine:
 
 ```sh
     xattr <binary name>
