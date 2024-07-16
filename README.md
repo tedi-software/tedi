@@ -13,8 +13,6 @@
 [![Issues][issues-shield]][issues-url]
 [![GitHub Downloads (all assets, all releases)][downloads-shield]][downloads-url]
 
-<!-- [![License][license-shield]][license-url] -->
-
 <p align="left">
 <a href="https://github.com/tedi-software/tedi">View Demo</a>
     |
@@ -61,12 +59,12 @@ The tedi repository is an example installation. Follow the installation steps be
 1. start TEDI
    ```sh
    cd /opt/tedi/bin
-   ./tedi_start.sh
+   ./start.sh
    ```
 2. stop TEDI
    ```sh
    cd /opt/tedi/bin
-   ./tedi_stop.sh
+   ./stop.sh
    ```
 3. viewing the logs
    ```sh
