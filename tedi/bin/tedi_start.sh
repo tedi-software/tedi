@@ -12,8 +12,6 @@ cd $(dirname ${0}) || exit 1
 
 . ./setenv.sh
 
-l_cmd="./tedi"
-
 
 
 #--------------------------------------------------------
@@ -73,11 +71,41 @@ function set_secrets {
     /usr/bin/env
     echo ""
 
+    l_binary=tedi_
+    l_os=$(uname)
+    l_os=${l_os,,}
+    l_arch=$(uname -m)
+    l_arch=${l_arch,,}
+
+    case "${l_os}" in
+      darwin)
+           if [[ "${l_arch}" == "x86_64" ]]; then
+               l_arch=amd64
+           fi
+        ;;
+    esac
+
+    l_binary=$(ls tedi_*_${l_os}_${l_arch})
+
+    if [[ ! -e "${l_binary}" ]]; then
+        echo "error cannot find tedi binary"
+        exit 1
+    fi
+
+    echo "selected executable: ${l_binary}"
+
+    ln -s ${l_binary} tedi
+
+    l_cmd="./tedi"
+
     ${l_cmd} &
     l_exit=$?
 
     l_pid=$!
     echo "${l_pid}" > ${TEDI_PID}
+
+    kill -0 ${l_pid}
+    l_exit=$?
 
     _log "finished tedi startup"
     _log "exit status: ${l_exit}"
