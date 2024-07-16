@@ -71,12 +71,20 @@ The tedi repository is an example installation. Follow the installation steps be
    tail -f tedi_*.log
    ```
 
+> [!NOTE]
+> This sample TEDI installation includes binaries for Linux and OSX.
+
+ Note: this MacOSX binaries are not signed and will be put into quarantine on download. To list and subsequently remove:
+
+```sh
+    xattr <binary name>
+    xattr -d <binary name>
+```
+
 <p align="right">(<a href="#top">top</a>)</p>
 
 
-
 ## ${\color{949698} ➤}$ Usage
-
 
 <p align="right">(<a href="#top">top</a>)</p>
 
@@ -99,9 +107,6 @@ The tedi repository is an example installation. Follow the installation steps be
 - [] Kafka
 - [] Azure ADLS
 - [] Azure EventHub
-
-
-
 
 See the [open issues](https://github.com/tedi-software/tedi/issues) for a full list of proposed features (and known issues).
 
