@@ -86,7 +86,13 @@ xattr -d com.apple.quarantine <binary name>
 
 ## ${\color{949698} ➤}$ Usage
 
-TEDI is driven by configuration files and 
+To build an integration in TEDI, you will stitch together two or more *processors*. A processor is an independent module that represents sending or receiving data via a protocol like https or 
+reading/writing records to a database.
+
+To build an integration, you will define a workflow in a file called <span style="font-size:0.80em;">``` service.properties ```</span>.
+
+
+
 
 
 <a id="demo"></a>
@@ -97,7 +103,7 @@ Many example services can be found under <span style="font-size:0.80em;">``` /te
 
 For this simple demo, we'll use the <span style="font-size:0.80em;"> ``` cmd ``` </span> example.
 
-The <span style="font-size:0.80em;">``` cmd ```</span> example demonstrates the stitching together of two *processors* to form a *service interface*. 
+The <span style="font-size:0.80em;">``` cmd ```</span> example demonstrates the stitching together of two *processors* to form a *service interface* or *integration*. 
 This particular interface is driven by two shell scripts (*commands*): 
 1. one to create input.
 2. the second to receive input from the first shell and act on it.
