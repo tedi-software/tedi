@@ -1,11 +1,11 @@
 
 <div align="center">
   <a href="https://github.com/tedi-software/tedi">
-    <img src="images/banner.png" alt="Tedi" >
+    <img src="images/tedi_icon.png" alt="Tedi" >
   </a>
 </div>
 
-###### *Copywrite (C) 2020-2024 TEDI, LLC*
+###### *Copywrite (C) 2020-2025 TEDI, LLC*
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
