@@ -1,5 +1,5 @@
 
-<div align="center">
+<div align="left">
   <a href="https://github.com/tedi-software/tedi">
     <img src="images/tedi_banner_small.png" alt="Tedi" >
   </a>
