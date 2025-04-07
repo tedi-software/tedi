@@ -1,7 +1,7 @@
 
 <div align="center">
   <a href="https://github.com/tedi-software/tedi">
-    <img src="images/tedi_icon.png" alt="Tedi" >
+    <img src="images/tedi_banner_small.png" alt="Tedi" >
   </a>
 </div>
 
