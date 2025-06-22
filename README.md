@@ -135,25 +135,22 @@ cd /opt/tedi/bin
 <p align="right">(<a href="#top">top</a>)</p>
 
 
-### ${\color{949698} ➤}$ Supported Protocols
+### ${\color{949698} ➤}$ Supported Protocols and Functions
 - [x] Shell
 - [x] SFTP
 - [x] HTTPS
 - [x] NATS (Core/JetStream)
 - [x] XSLT (in-memory/on-disk)
 - [x] PGP
+- [x] Convert XML <-> JSON
+- [x] Convert JSON <-> CSV
+- [x] Convert JSONL <-> CSV
 - [x] Database
   - [x] Oracle
   - [x] MySQL
   - [x] PostgreSQL
   - [x] Microsoft SQL Server
 
-
-### ${\color{949698} ➤}$ Roadmap
-- [] AS2
-- [] Kafka
-- [] Azure ADLS
-- [] Azure EventHub
 
 See the [open issues](https://github.com/tedi-software/tedi/issues) for a full list of proposed features (and known issues).
 
