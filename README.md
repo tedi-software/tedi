@@ -25,7 +25,10 @@
 
 ### ${\color{949698} ➤}$ About TEDI
 <p align="left">
-TEDI is an easy-to-use, cloud-native, high-performant, low-code integration server. TEDI is a low-cost solution to facilitate the movement of your important business data between business applications and services (A2A & B2B) internally within your organization and externally with your trading partners.
+TEDI is an easy-to-use, cloud-native, high-performant, low-code Integration Server. 
+
+Now with **built-in AI Agent Integration** (OpenAI, Groq, and LangChain), TEDI can reason about your data, transform it intelligently, and even automate multi-step workflows — all inside your existing integration pipelines. 
+TEDI remains a low-cost solution to facilitate the movement of your important business data between business applications and services (A2A & B2B) internally within your organization and externally with your trading partners.
 
 TEDI saves engineering and development time by employing a framework of common engineering patterns that can be stitched together via workflows driven by configuration files.
 
@@ -102,7 +105,7 @@ A **processor** is an independent module that represents sending or receiving da
 
 At startup, TEDI will scan all the directories under <span style="font-size:0.80em;">``` tedi/services/ ```</span> looking for <span style="font-size:0.80em;">``` service.properties ```</span> files. When it finds one, it will load all the listed services, create a workflow, and begin executing it. This in effect means that in a single TEDI process, you can run a single service (integration), a set of related services, or as many as you like; there's no limit on the number of services you can run. This also means that if you want to prevent an integration from running, you can simply rename the <span style="font-size:0.80em;">``` service.properties ```</span> to something like <span style="font-size:0.80em;">``` ignore_service.properties ```</span>  and TEDI will not load that service.
 
-For some working examples, view <span style="font-size:0.80em;">``` /tedi/services/examples ```</span>.
+For some working examples, view <span style="font-size:0.80em;">``` /tedi/services/examples```</span>.
 
 
 <p align="right">(<a href="#top">top</a>)</p>
@@ -112,30 +115,51 @@ For some working examples, view <span style="font-size:0.80em;">``` /tedi/servic
 
 Many example services can be found under <span style="font-size:0.80em;">``` /tedi/services/examples ```</span>.
 
-For this simple demo, we'll use the <span style="font-size:0.80em;"> ``` cmd ``` </span> example.
+For this simple demo, we'll use the <span style="font-size:0.80em;"> ``` OpenAI ``` </span>  example.
 
 The <span style="font-size:0.80em;">``` cmd ```</span> example demonstrates the stitching together of two *processors* to form a *service interface* or *integration*. 
-This particular interface is driven by two shell scripts (*commands*): 
-1. one to create input.
-2. the second to receive input from the first shell and act on it.
-
-note: the input script will run indefinately.
+This particular integration is driven by a shell script, which generates input, and then openai chat agent: 
 
 ( these commands assume you rooted tedi under /opt/ )
 
 First follow the installation steps.
 
 ```sh
-cd /opt/tedi/services/examples/cmd
+cd /opt/tedi/services/test/ai_transform/openai
 mv ignore_service.properties service.properties
 cd /opt/tedi/bin
 ./start.sh
 ```
 
+This service:
+1. Receives a JSON payload from the command processor
+2. Passes it to an AI processor (OpenAI/Groq/LangChain) to convert to XML
+3. Outputs the AI-generated structured result
+
+Swap in your own prompt and models to adapt it for classification, enrichment, or automated decision-making.
+
+**Note: Model Access Options** 
+
+TEDI lets you run AI processors locally or connect to remote APIs. For each provider, you can choose:
+- Local – Run the model on your machine (e.g., via Ollama) to avoid network calls and API costs.
+- Remote – Use a hosted model by providing a valid bearer token for API authentication.
+
+Examples:
+- OpenAI – Run locally with gpt-oss:20b in Ollama or connect to the OpenAI API using your API key.
+- Groq – Run Groq-supported models locally (if available) or connect to Groq’s hosted API with a bearer token.
+- LangChain – Chain together local or remote LLMs and tools. For remote use, provide the API key(s) required by your chosen model provider(s).
+
+This flexibility means you can develop and test locally, then deploy with hosted models in production — without changing your workflow definitions.
+
+
 <p align="right">(<a href="#top">top</a>)</p>
 
 
 ### ${\color{949698} ➤}$ Supported Protocols and Functions
+- [x] AI Agent Integration - Combine AI processors with any of TEDI’s existing connectors (SFTP, HTTPS, Databases, etc.) to create pipelines that not only move data, but understand and act on it.
+  - [x] OpenAI – Access GPT-class models for summarization, classification, and reasoning
+  - [x] Groq – Ultra-fast LLM inference for real-time AI-powered workflows
+  - [x] LangChain – Chain models, tools, and APIs for agent-driven automation
 - [x] Shell
 - [x] SFTP
 - [x] HTTPS
@@ -150,7 +174,6 @@ cd /opt/tedi/bin
   - [x] MySQL
   - [x] PostgreSQL
   - [x] Microsoft SQL Server
-
 
 See the [open issues](https://github.com/tedi-software/tedi/issues) for a full list of proposed features (and known issues).
 
